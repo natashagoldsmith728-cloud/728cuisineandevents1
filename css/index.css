@@ -1,231 +1,78 @@
-/* ---------- Base styles ---------- */
-:root {
-  --black: #050506;
-  --black-soft: #111111;
-  --gold: #d8a029;
-  --gold-soft: #f0c256;
-  --white: #f7f7f7;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>728 Cuisine &amp; Events | Elegance in Every Bite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-body {
-  margin: 0;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top left, #202020, #000000);
-  color: var(--white);
-}
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">728</span>
+        <span class="logo-sub">CUISINE &amp; EVENTS</span>
+      </a>
 
-/* ---------- Header / Nav ---------- */
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-.site-header {
-  background: linear-gradient(to bottom, #000000, #050506);
-  color: var(--white);
-  position: relative;
-  z-index: 10;
-}
+    <div class="gold-bar" aria-hidden="true"></div>
+  </header>
 
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
 
-.logo {
-  text-decoration: none;
-  color: var(--gold);
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
+      <!-- Replace the image URL below with your own hero photo in your /images/ folder -->
+      <img
+        src="images/hero-table.jpg"
+        alt="Elegant candlelit dinner table with gold accents and white flowers"
+        class="hero-bg"
+      >
 
-.logo-main {
-  font-family: "Playfair Display", serif;
-  font-size: 2.6rem;
-  letter-spacing: 0.08em;
-}
+      <div class="hero-content">
+        <h1 id="hero-title">Elegance in Every Bite</h1>
+        <p class="hero-subtitle">
+          Luxury Catering &nbsp;|&nbsp; Private Chef Experiences &nbsp;|&nbsp; Event Planning
+        </p>
+        <a href="contact.html" class="btn-primary">Book Your Event</a>
+      </div>
+    </section>
 
-.logo-sub {
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  margin-top: 4px;
-}
+    <!-- INTRO SECTION -->
+    <section class="intro">
+      <div class="intro-inner">
+        <h2>Welcome to 728 Cuisine &amp; Events</h2>
+        <p>
+          We specialize in upscale catering and unforgettable event experiences.
+          From intimate dinners to large celebrations, our team brings polished
+          service, thoughtful menus, and beautiful presentation to every event.
+        </p>
+      </div>
+    </section>
+  </main>
 
-.main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 32px;
-}
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> 728 Cuisine &amp; Events. All rights reserved.</p>
+  </footer>
 
-.main-nav a {
-  text-decoration: none;
-  font-size: 0.95rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--white);
-  position: relative;
-  padding-bottom: 4px;
-}
-
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gold);
-  transition: width 0.2s ease-out;
-}
-
-.main-nav a:hover::after,
-.main-nav a.active::after {
-  width: 100%;
-}
-
-.gold-bar {
-  height: 12px;
-  background: linear-gradient(to right, var(--gold), var(--gold-soft));
-}
-
-/* ---------- Hero ---------- */
-
-.hero {
-  position: relative;
-  min-height: 75vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: var(--white);
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.45);
-  transform: scale(1.03);
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 800px;
-  padding: 40px 20px 60px;
-}
-
-.hero-content h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2.8rem, 5vw, 3.9rem);
-  margin: 0 0 16px;
-  color: var(--gold-soft);
-}
-
-.hero-subtitle {
-  font-size: 1.05rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin: 0 0 28px;
-}
-
-/* ---------- Button ---------- */
-
-.btn-primary {
-  display: inline-block;
-  padding: 14px 36px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background: var(--gold);
-  color: var(--black);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out;
-}
-
-.btn-primary:hover {
-  background: var(--gold-soft);
-  transform: translateY(-1px);
-  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.6);
-}
-
-/* ---------- Intro section ---------- */
-
-.intro {
-  background: radial-gradient(circle at top, #202020, #050506);
-  padding: 48px 20px 72px;
-}
-
-.intro-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.intro-inner h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  color: var(--gold-soft);
-  margin-bottom: 12px;
-}
-
-.intro-inner p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #e0e0e0;
-}
-
-/* ---------- Footer ---------- */
-
-.site-footer {
-  border-top: 1px solid #222;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.85rem;
-  color: #bbbbbb;
-  background: #050506;
-}
-
-/* ---------- Responsive ---------- */
-
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .main-nav ul {
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  .hero {
-    min-height: 70vh;
-  }
-
-  .hero-subtitle {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-}
+  <script>
+    // Simple script to always show the current year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
