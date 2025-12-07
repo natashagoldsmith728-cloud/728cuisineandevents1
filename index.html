@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Black & Gold Theme</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>728 Cuisine &amp; Events | Elegance in Every Bite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Home Page</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">728</span>
+        <span class="logo-sub">CUISINE &amp; EVENTS</span>
+      </a>
 
-    <main>
-        <section class="hero">
-            <h2>Experience the Elegance of Black and Gold</h2>
-            <p>This is your stylish homepage content with a sleek black and gold theme.</p>
-        </section>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-        <section class="features">
-            <div class="feature-box">
-                <h3>Feature One</h3>
-                <p>Some descriptive text for feature one.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Feature Two</h3>
-                <p>Some descriptive text for feature two.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Feature Three</h3>
-                <p>Some descriptive text for feature three.</p>
-            </div>
-        </section>
-    </main>
+    <div class="gold-bar" aria-hidden="true"></div>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 My Black & Gold Website</p>
-    </footer>
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+
+      <!-- Replace the image URL below with your own hero photo in your /images/ folder -->
+      <img
+        src="images/hero-table.jpg"
+        alt="Elegant candlelit dinner table with gold accents and white flowers"
+        class="hero-bg"
+      >
+
+      <div class="hero-content">
+        <h1 id="hero-title">Elegance in Every Bite</h1>
+        <p class="hero-subtitle">
+          Luxury Catering &nbsp;|&nbsp; Private Chef Experiences &nbsp;|&nbsp; Event Planning
+        </p>
+        <a href="contact.html" class="btn-primary">Book Your Event</a>
+      </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="intro">
+      <div class="intro-inner">
+        <h2>Welcome to 728 Cuisine &amp; Events</h2>
+        <p>
+          We specialize in upscale catering and unforgettable event experiences.
+          From intimate dinners to large celebrations, our team brings polished
+          service, thoughtful menus, and beautiful presentation to every event.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> 728 Cuisine &amp; Events. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple script to always show the current year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
