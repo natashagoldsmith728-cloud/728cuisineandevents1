@@ -1,0 +1,293 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0d0d0d; /* deep black */
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* ========== COLOR PALETTE ========== */
+/* Gold: #D4AF37 (primary gold) */
+/* Soft Gold: #e4c96f */
+/* Black: #000000 */
+/* Dark Charcoal: #0d0d0d */
+
+/* ===================================
+   NAVIGATION (Elegant Gold Accents)
+   =================================== */
+.main-nav {
+  background-color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #D4AF37;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #D4AF37;
+  letter-spacing: 1px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #D4AF37;
+  border-bottom: 2px solid #D4AF37;
+}
+
+/* ===================================
+   HERO SECTION (Luxury Layout)
+   =================================== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+}
+
+.hero-text {
+  flex: 1 1 260px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero-image {
+  flex: 1 1 260px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #D4AF37;
+}
+
+/* GOLD BUTTONS */
+.btn {
+  display: inline-block;
+  background-color: #D4AF37;
+  color: #000;
+  padding: 0.7rem 1.3rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #e4c96f;
+}
+
+/* ===================================
+   SECTION HEADERS
+   =================================== */
+h1, h2, h3 {
+  color: #D4AF37;
+  margin-bottom: 0.8rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* ===================================
+   HOME HIGHLIGHTS
+   =================================== */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.highlight {
+  background-color: #1a1a1a;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid #D4AF37;
+  flex: 1 1 250px;
+  transition: 0.3s;
+}
+
+.highlight:hover {
+  background-color: #222;
+}
+
+/* ===================================
+   ABOUT PAGE
+   =================================== */
+.about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.about-layout > div {
+  flex: 1 1 300px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #D4AF37;
+}
+
+.simple-list {
+  margin-left: 1rem;
+  list-style: square;
+}
+
+.simple-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===================================
+   SERVICES PAGE (Luxury Cards)
+   =================================== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.service-card {
+  background-color: #1a1a1a;
+  padding: 1.4rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  border-color: #D4AF37;
+  transform: translateY(-5px);
+}
+
+/* ===================================
+   CONTACT PAGE (Form Styling)
+   =================================== */
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-form-wrapper,
+.contact-info {
+  flex: 1 1 300px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #e4c96f;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #222;
+  color: #f5f5f5;
+  border: 1px solid #444;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #D4AF37;
+  outline: none;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+footer {
+  background-color: #000;
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 2px solid #D4AF37;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* ===================================
+   MOBILE FRIENDLY DESIGN
+   =================================== */
+@media (max-width: 700px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .highlights,
+  .about-layout,
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+}

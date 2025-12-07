@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | 728 Cuisine & Events</title>
+  <meta name="description" content="Contact 728 Cuisine & Events for luxury catering, private chef experiences, and event planning.">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">728 Cuisine &amp; Events</div>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="contact-hero" aria-label="Contact 728 Cuisine & Events">
+      <h1>Contact Us</h1>
+      <p>Tell us about your event and we’ll craft a menu and experience that’s truly unforgettable.</p>
+      <div class="owner">
+        <p class="owner-name">Natasha Goldsmith</p>
+        <p class="owner-meta">
+          <span class="owner-phone">Phone: <a href="tel:+18046810312">804&nbsp;681&nbsp;0312</a></span> • 
+          <span class="owner-email">Email: <a href="mailto:natasha.goldsmith728@gmail.com">natasha.goldsmith728@gmail.com</a></span>
+        </p>
+      </div>
+    </section>
+
+    <section class="form-wrap" aria-label="Contact form">
+      <form method="post" action="http://ss1.ciwcertified.com/cgi-bin/process.php" novalidate>
+        <fieldset>
+          <legend>Send a Message</legend>
+
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" name="Name" type="text" autocomplete="name" placeholder="Your full name" required>
+          </div>
+
+          <div class="field two-col">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" type="tel" inputmode="tel" pattern="^[0-9\\-\\s\\(\\)]{7,}$" placeholder="(804) 681-0312" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="Subject" type="text" placeholder="Private dinner, wedding, corporate, etc." required>
+          </div>
+
+          <div class="field">
+            <label for="guests">Estimated Guest Count</label>
+            <input id="guests" name="Guests" type="number" min="1" max="1000" step="1" placeholder="e.g., 75">
+          </div>
+
+          <div class="field">
+            <label for="date">Event Date</label>
+            <input id="date" name="EventDate" type="date">
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="6" placeholder="Share your vision, venue, and any dietary preferences." required></textarea>
+          </div>
+
+          <div class="checkbox">
+            <input id="consent" name="Consent" type="checkbox" required>
+            <label for="consent">I agree to be contacted about my inquiry.</label>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Send Message</button>
+            <button type="reset" class="secondary">Reset</button>
+          </div>
+
+          <p class="privacy">We respect your privacy and will never share your information.</p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 728 Cuisine &amp; Events — Richmond, VA</p>
+  </footer>
+</body>
+</html>
