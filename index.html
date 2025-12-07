@@ -8,10 +8,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Main CSS (no folder, just styles.css) -->
+  <!-- Main CSS (same folder as this file) -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <header class="site-header">
     <div class="header-inner">
@@ -20,8 +19,13 @@
         <span class="logo-sub">CUISINE &amp; EVENTS</span>
       </a>
 
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
       <nav class="main-nav" aria-label="Primary navigation">
-        <ul>
+        <ul class="nav-list">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="events.html">Events</a></li>
@@ -38,9 +42,10 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-overlay"></div>
 
-      <!-- Replace the image URL below with your own hero photo in your /images/ folder -->
+      <!-- IMPORTANT: put your hero image in the SAME folder and name it hero-table.jpg
+           (or change this src to match your real file name) -->
       <img
-        src="images/hero-table.jpg"
+        src="hero-table.jpg"
         alt="Elegant candlelit dinner table with gold accents and white flowers"
         class="hero-bg"
       >
@@ -55,7 +60,7 @@
     </section>
 
     <!-- INTRO SECTION -->
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="intro-inner">
         <h2>Welcome to 728 Cuisine &amp; Events</h2>
         <p>
@@ -71,9 +76,19 @@
     <p>&copy; <span id="year"></span> 728 Cuisine &amp; Events. All rights reserved.</p>
   </footer>
 
+  <!-- JavaScript: mobile nav + dynamic year -->
   <script>
-    // Simple script to always show the current year in the footer
+    // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navList = document.querySelector('.nav-list');
+
+    navToggle.addEventListener('click', function () {
+      const isOpen = navList.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
   </script>
 </body>
 </html>
