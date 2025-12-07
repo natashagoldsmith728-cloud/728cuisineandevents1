@@ -1,0 +1,14 @@
+728cuisineandevents1/
+│── index.html      ← we’ll replace this
+│── about.html
+│── services.html
+│── gallery.html
+│── contact.html
+│
+├── css/
+│   └── style.css   ← we’ll add to / tweak this
+└── images/
+    ├── logo-728.png          ← your round logo
+    ├── hero-table.jpg        ← candles / table
+    ├── event-planning.jpg    ← elegant table image
+    └── private-chef.jpg      ← chef portrait
