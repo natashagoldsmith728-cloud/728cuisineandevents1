@@ -1,42 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>728 Cuisine & Events | Home</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>728 Cuisine &amp; Events | About Us</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="logo-wrap">
+            <div class="logo-mark">728</div>
+            <div class="logo-text">
+                <span class="logo-name">Cuisine &amp; Events</span>
+                <span class="logo-tagline">Elevated Dining &amp; Elegant Moments</span>
+            </div>
+        </div>
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <h1>Elegance in Every Detail</h1>
-  </section>
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Intro Section -->
-  <section class="intro">
-    <h2>Welcome to 728 Cuisine & Events</h2>
-    <p>We craft unforgettable experiences through refined catering, bespoke event planning, and luxurious styling. Our black and gold aesthetic reflects sophistication, ensuring every occasion shines with timeless elegance.</p>
-  </section>
+    <main>
+        <!-- HERO / INTRO -->
+        <section class="hero">
+            <div class="hero-inner">
+                <h1>Timeless Events. Chef-Curated Menus.</h1>
+                <p class="hero-text">
+                    728 Cuisine &amp; Events brings a modern black-and-gold aesthetic, warm hospitality, 
+                    and chef-driven flavors together to create experiences your guests will remember.
+                </p>
+            </div>
+        </section>
 
-  <!-- Showcase Images -->
-  <section class="showcase">
-    <img src="images/gallery1.jpg" alt="Elegant dining setup">
-    <img src="images/gallery2.jpg" alt="Catering showcase">
-    <img src="images/gallery3.jpg" alt="Venue styling">
-  </section>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section section-light">
+            <div class="section-inner">
+                <h2>About 728 Cuisine &amp; Events</h2>
+                <p>
+                    728 Cuisine &amp; Events is a boutique catering and event brand focused on intimate 
+                    dinners, celebrations, and small gatherings. Our goal is simple: combine beautiful 
+                    presentation, thoughtful details, and great food so you can actually enjoy your own event.
+                </p>
+                <p>
+                    From private dinners to milestone celebrations, we work with you to design a menu and 
+                    atmosphere that match your vision. Every event is treated like it matters—because it does.
+                </p>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 728 Cuisine & Events | Designed with Elegance
-  </footer>
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section section-dark">
+            <div class="section-inner">
+                <h2>Signature Services</h2>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <h3>Private Chef Experiences</h3>
+                        <p>
+                            Multi-course dinners in your home or venue with a custom menu, grocery shopping, 
+                            cooking, service, and cleanup included.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Catering for Small Events</h3>
+                        <p>
+                            Perfect for birthdays, showers, graduations, and small corporate events. Buffet, 
+                            plated, or family-style options available.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Event Styling &amp; Coordination</h3>
+                        <p>
+                            Black-and-gold inspired decor, timelines, and setup support to keep your event 
+                            polished and stress-free from start to finish.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORY SECTION -->
+        <section id="story" class="section section-light">
+            <div class="section-inner">
+                <h2>Our Story</h2>
+                <p>
+                    728 represents more than a name—it reflects important dates, memories, and the idea that 
+                    every moment is worth celebrating. After years of cooking for family, friends, and special 
+                    occasions, 728 Cuisine &amp; Events grew into a way to serve the community with the same care.
+                </p>
+                <p>
+                    The brand leans into a black-and-gold theme to represent elegance, confidence, and 
+                    celebration. Whether it’s a cozy dinner for two or a room full of guests, 728 is about 
+                    making each person feel seen, welcomed, and well fed.
+                </p>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section section-dark">
+            <div class="section-inner">
+                <h2>Contact &amp; Inquiries</h2>
+                <p class="section-intro">
+                    Ready to plan your next event or private dinner? Share a few details below.
+                </p>
+
+                <form class="contact-form">
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" placeholder="First and last name">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="you@example.com">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="event-type">Event Type</label>
+                        <input id="event-type" type="text" name="event-type" placeholder="Dinner, birthday, shower, etc.">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="details">Event Details</label>
+                        <textarea id="details" name="details" rows="4" placeholder="Date, guest count, and vision."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Submit Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2025 728 Cuisine &amp; Events. All rights reserved.</p>
+    </footer>
 </body>
 </html>
