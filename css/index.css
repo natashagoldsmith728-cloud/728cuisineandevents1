@@ -1,121 +1,231 @@
-/* General styles */
+/* ---------- Base styles ---------- */
+:root {
+  --black: #050506;
+  --black-soft: #111111;
+  --gold: #d8a029;
+  --gold-soft: #f0c256;
+  --white: #f7f7f7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: black;
-    color: gold;
-    max-width: 728px;
-    margin: 0 auto;
-    padding: 20px;
+  margin: 0;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #202020, #000000);
+  color: var(--white);
 }
 
-/* Header */
-header {
-    text-align: center;
-    margin-bottom: 20px;
+/* ---------- Header / Nav ---------- */
+
+.site-header {
+  background: linear-gradient(to bottom, #000000, #050506);
+  color: var(--white);
+  position: relative;
+  z-index: 10;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.logo {
+  text-decoration: none;
+  color: var(--gold);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
 }
 
-nav a {
-    color: gold;
-    text-decoration: none;
-    font-weight: bold;
+.logo-main {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.08em;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.logo-sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  margin-top: 4px;
 }
 
-/* Hero Section */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 32px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.2s ease-out;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+.gold-bar {
+  height: 12px;
+  background: linear-gradient(to right, var(--gold), var(--gold-soft));
+}
+
+/* ---------- Hero ---------- */
+
 .hero {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #111;
-    border-radius: 10px;
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--white);
 }
 
-.hero h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+  transform: scale(1.03);
 }
 
-/* Features Section */
-.features {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 30px;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
 }
 
-.feature-box {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 8px;
-    flex: 1 1 calc(33% - 10px);
-    text-align: center;
-    min-width: 200px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 40px 20px 60px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 10px;
-    border-top: 1px solid gold;
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 5vw, 3.9rem);
+  margin: 0 0 16px;
+  color: var(--gold-soft);
 }
 
-/* Responsive Styles */
+.hero-subtitle {
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+}
+
+/* ---------- Button ---------- */
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--black);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out;
+}
+
+.btn-primary:hover {
+  background: var(--gold-soft);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Intro section ---------- */
+
+.intro {
+  background: radial-gradient(circle at top, #202020, #050506);
+  padding: 48px 20px 72px;
+}
+
+.intro-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-inner h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--gold-soft);
+  margin-bottom: 12px;
+}
+
+.intro-inner p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid #222;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #bbbbbb;
+  background: #050506;
+}
+
+/* ---------- Responsive ---------- */
+
 @media (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 
-    header h1 {
-        font-size: 2em;
-    }
+  .main-nav ul {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
 
-    .hero h2 {
-        font-size: 1.5em;
-    }
+  .hero {
+    min-height: 70vh;
+  }
 
-    .features {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .feature-box {
-        flex: 1 1 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-
-    .hero {
-        padding: 30px 10px;
-    }
-
-    .hero h2 {
-        font-size: 1.2em;
-    }
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
 }
