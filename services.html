@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Our Services</h1>
+  </header>
+
+  <section class="services">
+    <div class="service-card" id="catering">
+      <h2>Catering Excellence</h2>
+      <p>From intimate gatherings to grand celebrations, our catering delivers unforgettable flavors with elegance.</p>
+    </div>
+    <div class="service-card" id="planning">
+      <h2>Event Planning</h2>
+      <p>We design and manage events with precision, ensuring every detail reflects your vision and sophistication.</p>
+    </div>
+    <div class="service-card" id="chef">
+      <h2>Private Chef Experience</h2>
+      <p>Indulge in a personalized dining journey crafted by our expert chefs in the comfort of your chosen venue.</p>
+    </div>
+    <div class="service-card" id="styling">
+      <h2>Venue Styling</h2>
+      <p>Transform spaces with luxurious décor, lighting, and ambiance tailored to your event’s theme.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 728 Cuisine & Events | Designed with Elegance
+  </footer>
+
+  <button id="backToTop">↑ Top</button>
+  <script>
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
+
+🖼 gallery.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
