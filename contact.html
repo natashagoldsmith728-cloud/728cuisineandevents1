@@ -1,23 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
+  <meta charset="utf-8">
+  <title>Contact | 728 Cuisine & Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request a proposal or book your event with 728 Cuisine & Events.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <!-- Header -->
 
-  <header>
-    <h1>Contact Us</h1>
-  </header>
+  <main class="container">
+    <header class="page-header">
+      <h1>Book Your Event</h1>
+      <p>Tell us about your vision—we’ll bring the elegance.</p>
+    </header>
+
+    <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+      <div class="form-row">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel">
+      </div>
+      <div class="form-row">
+        <label for="event-type">Event type</label>
+        <select id="event-type" name="eventType" required>
+          <option value="">Select an option</option>
+          <option>Wedding</option>
+          <option>Corporate</option>
+          <option>Private</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="date">Event date</label>
+        <input id="date" name="date" type="date">
+      </div>
+      <div class="form-row">
+        <label for="guests">Estimated guests</label>
+        <input id="guests" name="guests" type="number" min="1">
+      </div>
+      <div class="form-row">
+        <label for="message">Tell us more</label>
+        <textarea id="message" name="message" rows="6" placeholder="Menu preferences, venue, budget, and any special requests"></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Request a Proposal</button>
+        <p class="form-note">By submitting, you agree to be contacted regarding your event.</p>
+      </div>
+    </form>
+
+    <section class="contact-info">
+      <h2>Prefer to reach out directly?</h2>
+      <p>Email: info@728cuisine.com — Phone: (555) 728‑2728</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
 
   <section>
     <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
