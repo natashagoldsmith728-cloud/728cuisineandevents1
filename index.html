@@ -1,94 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>728 Cuisine &amp; Events | Elegance in Every Bite</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Main CSS (same folder as this file) -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-main">728</span>
-        <span class="logo-sub">CUISINE &amp; EVENTS</span>
-      </a>
-
-      <!-- Mobile menu button -->
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav class="main-nav" aria-label="Primary navigation">
-        <ul class="nav-list">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="gold-bar" aria-hidden="true"></div>
-  </header>
-
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-overlay"></div>
-
-      <!-- IMPORTANT: put your hero image in the SAME folder and name it hero-table.jpg
-           (or change this src to match your real file name) -->
-      <img
-        src="hero-table.jpg"
-        alt="Elegant candlelit dinner table with gold accents and white flowers"
-        class="hero-bg"
-      >
-
-      <div class="hero-content">
-        <h1 id="hero-title">Elegance in Every Bite</h1>
-        <p class="hero-subtitle">
-          Luxury Catering &nbsp;|&nbsp; Private Chef Experiences &nbsp;|&nbsp; Event Planning
-        </p>
-        <a href="contact.html" class="btn-primary">Book Your Event</a>
-      </div>
-    </section>
-
-    <!-- INTRO SECTION -->
-    <section class="intro" id="intro">
-      <div class="intro-inner">
-        <h2>Welcome to 728 Cuisine &amp; Events</h2>
-        <p>
-          We specialize in upscale catering and unforgettable event experiences.
-          From intimate dinners to large celebrations, our team brings polished
-          service, thoughtful menus, and beautiful presentation to every event.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> 728 Cuisine &amp; Events. All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript: mobile nav + dynamic year -->
-  <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile navigation toggle
-    const navToggle = document.getElementById('navToggle');
-    const navList = document.querySelector('.nav-list');
-
-    navToggle.addEventListener('click', function () {
-      const isOpen = navList.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
-  </script>
-</body>
-</html>
+/* Home page */
+.hero {
+  position: relative;
+}
+.hero img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  text-align: center;
+}
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.feature-card {
+  background: #16161a;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
