@@ -1,35 +1,53 @@
-/* Home page */
-.hero {
-  position: relative;
-}
-.hero img {
-  width: 100%;
-  height: 70vh;
-  object-fit: cover;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,0.5);
-  text-align: center;
-}
-.hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-}
-.feature-card {
-  background: #16161a;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>728 Cuisine & Events | Elegance in Every Bite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Luxury catering, private chef experiences, and event planning with polished service and elegant presentation.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <!-- paste shared header here -->
+
+  <main>
+    <section class="hero">
+      <img src="images/hero-table.jpg" alt="Elegant candlelit dinner table with gold accents and white flowers" class="hero-image">
+      <div class="hero-overlay">
+        <h1>Elegance in Every Bite</h1>
+        <p class="subhead">Luxury Catering · Private Chef Experiences · Event Planning</p>
+        <a href="contact.html" class="btn btn-primary">Book Your Event</a>
+      </div>
+    </section>
+
+    <section class="intro container">
+      <h2>Welcome to 728 Cuisine & Events</h2>
+      <p>We specialize in upscale catering and unforgettable event experiences. From intimate dinners to large celebrations, our team brings polished service, thoughtful menus, and beautiful presentation to every event.</p>
+    </section>
+
+    <section class="features container">
+      <div class="feature-card">
+        <h3>Luxury Catering</h3>
+        <p>Bespoke menus crafted to your vision, executed with impeccable taste and timing.</p>
+        <a href="services.html" class="link">Explore Services →</a>
+      </div>
+      <div class="feature-card">
+        <h3>Private Chef</h3>
+        <p>Exclusive in‑home dining experiences with curated courses and wine pairings.</p>
+        <a href="services.html#private-chef" class="link">Discover Private Chef →</a>
+      </div>
+      <div class="feature-card">
+        <h3>Event Planning</h3>
+        <p>Seamless coordination—from décor to service—so you can savor the moment.</p>
+        <a href="services.html#event-planning" class="link">Plan with Us →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <!-- paste shared footer here -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
