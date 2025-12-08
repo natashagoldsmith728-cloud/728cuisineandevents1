@@ -1,140 +1,184 @@
-<!-- Shared Header -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <img src="images/logo728.jpg" alt="728 Cuisine & Events logo" class="logo">
-      <span class="brand-text">728 CUISINE & EVENTS</span>
-    </a>
-
-    <button class="nav-toggle" aria-label="Open navigation">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-
-    <nav class="site-nav" aria-label="Primary">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html" class="btn btn-outline">Book Your Event</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- Shared Footer -->
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>728 Cuisine & Events</h4>
-      <p>Elegance in Every Bite</p>
-    </div>
-    <div>
-      <h5>Contact</h5>
-      <p>Email: info728cuisine@gmail.com</p>
-      <p>Phone: (804) 898-6074</p>
-    </div>
-    <div>
-      <h5>Follow</h5>
-      <p>
-        <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">Pinterest</a>
-      </p>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p>© 2025 728 Cuisine & Events. All rights reserved.</p>
-  </div>
-</footer>
- <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>728 Cuisine & Events | Elegance in Every Bite</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Luxury catering, private chef experiences, and event planning with polished service and elegant presentation.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>728 Cuisine & Events | Elegant Catering & Private Chef Services</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <!-- Header -->
-  <!-- paste shared header here -->
+  <!-- Site Wrapper -->
+  <div class="site-wrapper">
 
-  <main>
-    <section class="hero">
-      <img src="images/hero-table.jpg" alt="Elegant candlelit dinner table with gold accents and white flowers" class="hero-image">
-      <div class="hero-overlay">
-        <h1>Elegance in Every Bite</h1>
-        <p class="subhead">Luxury Catering · Private Chef Experiences · Event Planning</p>
-        <a href="contact.html" class="btn btn-primary">Book Your Event</a>
+    <!-- Header + Navigation -->
+    <header class="site-header">
+      <div class="logo-area">
+        <!-- Update src if your logo file has a different name -->
+        <img src="images/728logo.jpeg" alt="728 Cuisine & Events logo" class="logo-img">
+        <div class="logo-text">
+          <span class="brand-name">728 Cuisine &amp; Events</span>
+          <span class="brand-tagline">Elegant Catering &amp; Event Experiences</span>
+        </div>
       </div>
-    </section>
 
-    <section class="intro container">
-      <h2>Welcome to 728 Cuisine & Events</h2>
-      <p>We specialize in upscale catering and unforgettable event experiences. From intimate dinners to large celebrations, our team brings polished service, thoughtful menus, and beautiful presentation to every event.</p>
-    </section>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
 
-    <section class="features container">
-      <div class="feature-card">
-        <h3>Luxury Catering</h3>
-        <p>Bespoke menus crafted to your vision, executed with impeccable taste and timing.</p>
-        <a href="services.html" class="link">Explore Services →</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <!-- Update image filename if needed -->
+        <img src="images/hero-elegant-dinner.jpg" alt="Elegant dinner setup with candlelight and fine dining" class="hero-image">
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">Richmond • Central Virginia</p>
+          <h1 class="hero-title">Luxury Catering &amp; Private Chef Experiences</h1>
+          <p class="hero-subtitle">
+            From intimate dinners to unforgettable celebrations, 728 Cuisine &amp; Events
+            brings elevated flavors, polished service, and timeless style to your table.
+          </p>
+          <div class="hero-buttons">
+            <a href="services.html" class="btn btn-primary">View Services</a>
+            <a href="contact.html" class="btn btn-outline">Book Your Event</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Highlight Strip -->
+      <section class="highlight-strip">
+        <div class="highlight-item">
+          <span class="highlight-label">Occasions</span>
+          <span class="highlight-text">Weddings • Private Dinners • Corporate Events • Celebrations</span>
+        </div>
+        <div class="highlight-item">
+          <span class="highlight-label">Chef</span>
+          <span class="highlight-text">Led by CEO &amp; Owner Natasha Goldsmith</span>
+        </div>
+      </section>
+
+      <!-- Featured Services -->
+      <section class="section section-services">
+        <div class="section-header">
+          <h2>Signature Services</h2>
+          <p>
+            Curated experiences designed to match your vision, guest list, and style.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Catering Experiences</h3>
+            <p>
+              Full-service catering for weddings, showers, birthdays, and special events.
+              Custom menus, staffing, and elegant setups tailored to your theme.
+            </p>
+            <a href="services.html" class="card-link">Explore Catering</a>
+          </article>
+
+          <article class="card">
+            <h3>Private Chef Dinners</h3>
+            <p>
+              Intimate, chef-prepared dinners in your home or venue, featuring multi-course
+              menus and personalized plating for an unforgettable night in.
+            </p>
+            <a href="services.html#private-chef" class="card-link">View Private Chef</a>
+          </article>
+
+          <article class="card">
+            <h3>Event Design &amp; Styling</h3>
+            <p>
+              Tablescapes, décor coordination, and vendor collaboration to bring
+              a cohesive and elevated look to your event.
+            </p>
+            <a href="events.html" class="card-link">View Events</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Gallery Preview -->
+      <section class="section section-gallery-preview">
+        <div class="section-header">
+          <h2>Scenes from 728 Events</h2>
+          <p>
+            A glimpse into the atmosphere, plating, and details that define the 728 experience.
+          </p>
+        </div>
+
+        <div class="gallery-row">
+          <!-- Update image filenames to match your actual images folder -->
+          <figure class="gallery-tile">
+            <img src="images/gallery-plates.jpg" alt="Elegant plated dinner entree">
+          </figure>
+          <figure class="gallery-tile">
+            <img src="images/gallery-tablescape.jpg" alt="Black and gold event tablescape">
+          </figure>
+          <figure class="gallery-tile">
+            <img src="images/gallery-dessert.jpg" alt="Dessert display with gold accents">
+          </figure>
+        </div>
+
+        <div class="section-cta">
+          <a href="gallery.html" class="btn btn-outline">View Full Gallery</a>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="section section-contact-cta">
+        <div class="contact-cta-inner">
+          <h2>Ready to Start Planning?</h2>
+          <p>
+            Share your date, guest count, and vision—and we’ll help you design an
+            experience that feels luxurious, personal, and stress-free.
+          </p>
+          <ul class="contact-details">
+            <li><strong>Email:</strong> <a href="mailto:natashagoldsmith728@gmail.com">natashagoldsmith728@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:18046810318">804-681-0318</a></li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Inquire Now</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">728 Cuisine &amp; Events</p>
+        <p class="footer-text">Elegant Catering &amp; Events • Richmond, VA</p>
+        <p class="footer-text footer-copy">
+          &copy; 2025 728 Cuisine &amp; Events. All rights reserved.
+        </p>
       </div>
-      <div class="feature-card">
-        <h3>Private Chef</h3>
-        <p>Exclusive in‑home dining experiences with curated courses and wine pairings.</p>
-        <a href="services.html#private-chef" class="link">Discover Private Chef →</a>
-      </div>
-      <div class="feature-card">
-        <h3>Event Planning</h3>
-        <p>Seamless coordination—from décor to service—so you can savor the moment.</p>
-        <a href="services.html#event-planning" class="link">Plan with Us →</a>
-      </div>
-    </section>
-  </main>
+    </footer>
+  </div>
 
-  <!-- Footer -->
-  <!-- paste shared footer here -->
+  <!-- Simple Mobile Nav Script -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
-  <script src="js/script.js"></script>
-</body>
-</html>
-  <main>
-    <section class="hero">
-      <img src="images/hero-table.jpg" alt="Elegant candlelit dinner table with gold accents and white flowers" class="hero-image">
-      <div class="hero-overlay">
-        <h1>Elegance in Every Bite</h1>
-        <p class="subhead">Luxury Catering · Private Chef Experiences · Event Planning</p>
-        <a href="contact.html" class="btn btn-primary">Book Your Event</a>
-      </div>
-    </section>
-
-    <section class="intro container">
-      <h2>Welcome to 728 Cuisine & Events</h2>
-      <p>We specialize in upscale catering and unforgettable event experiences. From intimate dinners to large celebrations, our team brings polished service, thoughtful menus, and beautiful presentation to every event.</p>
-    </section>
-
-    <section class="features container">
-      <div class="feature-card">
-        <h3>Luxury Catering</h3>
-        <p>Bespoke menus crafted to your vision, executed with impeccable taste and timing.</p>
-        <a href="services.html" class="link">Explore Services →</a>
-      </div>
-      <div class="feature-card">
-        <h3>Private Chef</h3>
-        <p>Exclusive in‑home dining experiences with curated courses and wine pairings.</p>
-        <a href="services.html#private-chef" class="link">Discover Private Chef →</a>
-      </div>
-      <div class="feature-card">
-        <h3>Event Planning</h3>
-        <p>Seamless coordination—from décor to service—so you can savor the moment.</p>
-        <a href="services.html#event-planning" class="link">Plan with Us →</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <!-- paste shared footer here -->
-
-  <script src="js/script.js"></script>
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('nav-open');
+        navToggle.classList.toggle('nav-open');
+      });
+    }
+  </script>
 </body>
 </html>
