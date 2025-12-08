@@ -1,31 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">t" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <meta charset="utf-8">
+  <title>Gallery | 728 Cuisine & Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A curated look at our culinary artistry and event styling.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <!-- Header -->
 
-  <header>
-    <h1>Gallery</h1>
-  </header>
+  <main class="container">
+    <header class="page-header">
+      <h1>Gallery</h1>
+      <p>Moments crafted with taste and intention.</p>
+    </header>
 
-  <section>
-    <img src="images/gallery1.jpg" alt="Elegant dining setup" width="100%">
-    <img src="images/gallery2.jpg" alt="Catering showcase" width="100%">
-    <img src="images/gallery3.jpg" alt="Venue styling" width="100%">
-  </section>
+    <section class="video-block">
+      <video controls poster="images/gallery-1.jpg">
+        <source src="video/intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="caption">A glimpse into the 728 experience.</p>
+    </section>
 
-  <footer>
-    © 2025 728 Cuisine & Events
-  </footer>
+    <section class="gallery-grid" id="gallery">
+      <a href="images/gallery-1.jpg" class="gallery-item"><img src="images/gallery-1.jpg" alt="Plated fine dining dish"></a>
+      <a href="images/gallery-2.jpg" class="gallery-item"><img src="images/gallery-2.jpg" alt="Table setting with candles"></a>
+      <a href="images/gallery-3.jpg" class="gallery-item"><img src="images/gallery-3.jpg" alt="Chef preparing courses"></a>
+    </section>
+
+    <!-- Lightbox modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <img class="lightbox-image" alt="">
+    </div>
+  </main>
+
+  <!-- Footer -->
+
+  <script src="js/script.js"></script>
 </body>
 </html>
