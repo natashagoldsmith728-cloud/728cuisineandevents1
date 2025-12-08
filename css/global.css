@@ -1,0 +1,176 @@
+/* global.css – base styles (add/merge these if not already present) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #050505;
+  color: #f7f7f7;
+  line-height: 1.6;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Nav */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #222;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #d4af37;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: #d4af37;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #f7f7f7;
+  text-decoration: none;
+  position: relative;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 0;
+  height: 1px;
+  background-color: #d4af37;
+  transition: width 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* Mobile Nav Toggle */
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0.35rem;
+  cursor: pointer;
+}
+
+.nav-toggle-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  margin: 4px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Footer */
+
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid #222;
+  background: #000000;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.footer-inner {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+
+.footer-brand {
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.footer-copy {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+}
+
+/* Mobile nav behavior */
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #000000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    padding: 0.75rem 1.5rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .main-nav.nav-open {
+    max-height: 260px;
+  }
+}
