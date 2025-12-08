@@ -1,0 +1,12 @@
+/* Global theme */
+body {
+  background: #0f0f12;
+  color: #e6e6e6;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+h1, h2, h3 { color: #d7b65f; }
+a { color: #c9a34a; text-decoration: none; }
+a:hover { color: #d7b65f; }
+.container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+/* Header, footer, buttons, nav styles go here */
