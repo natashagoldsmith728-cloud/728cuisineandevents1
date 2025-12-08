@@ -1,0 +1,14 @@
+/* Contact page */
+.contact-form {
+  background: #16161a; padding: 1.5rem; border-radius: 10px; border: 1px solid #2a2a33;
+}
+.contact-form label {
+  display: block; margin-bottom: 0.25rem; font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%; padding: 0.65rem; border-radius: 8px;
+  border: 1px solid #2a2a33; background: #101014; color: #e6e6e6;
+}
+.contact-form button { margin-top: 1rem; }
