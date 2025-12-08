@@ -1,0 +1,19 @@
+/* Gallery page */
+.video-block { margin: 2rem 0; }
+.video-block video {
+  width: 100%; border-radius: 10px; border: 1px solid #2a2a33;
+}
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
+}
+.gallery-item img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: pointer;
+}
+.lightbox {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+  display: none; align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 90%; max-height: 80vh; border: 2px solid #d7b65f;
+}
