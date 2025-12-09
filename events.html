@@ -1,47 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Events | 728 Cuisine & Events</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Signature events: weddings, corporate gatherings, and private celebrations.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | 728 Cuisine &amp; Events</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="events.css">
 </head>
 <body>
-  <!-- Header -->
+  <div class="site-wrapper">
+    <header class="site-header">
+      <div class="logo-area">
+        <img src="images/728logo.jpeg" alt="728 Cuisine &amp; Events logo" class="logo-img">
+        <div class="logo-text">
+          <span class="brand-name">728 Cuisine &amp; Events</span>
+          <span class="brand-tagline">Elegant Catering &amp; Event Experiences</span>
+        </div>
+      </div>
 
-  <main class="container">
-    <header class="page-header">
-      <h1>Signature Events</h1>
-      <p>Each event is a canvas—curated with culinary finesse and impeccable service.</p>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="event-grid">
-      <article class="event-card">
-        <img src="images/event-wedding.jpg" alt="Elegant wedding reception table">
-        <h2>Weddings</h2>
-        <p>Timeless menus, refined service, and romantic styling for ceremonies and receptions.</p>
-      </article>
-      <article class="event-card">
-        <img src="images/event-corporate.jpg" alt="Corporate event with modern setup">
-        <h2>Corporate</h2>
-        <p>Executive luncheons, galas, and product launches—designed for flawless flow and presentation.</p>
-      </article>
-      <article class="event-card">
-        <img src="images/event-private.jpg" alt="Private dinner party ambiance">
-        <h2>Private</h2>
-        <p>Bespoke celebrations—birthdays, anniversaries, and intimate gatherings with signature flair.</p>
-      </article>
-    </section>
+    <main>
+      <section class="events-hero">
+        <div class="events-hero-inner">
+          <p class="events-eyebrow">Weddings • Corporate • Celebrations</p>
+          <h1>Events with 728 Cuisine &amp; Events</h1>
+          <p>
+            Thoughtful planning, beautiful details, and elevated food for the moments
+            that matter most.
+          </p>
+        </div>
+      </section>
 
-    <div class="cta-banner">
-      <h3>Let’s bring your vision to life</h3>
-      <a href="gallery.html" class="btn btn-outline">View Gallery</a>
-    </div>
-  </main>
+      <section class="events-layout">
+        <div class="events-text">
+          <h2>Types of Events</h2>
+          <ul>
+            <li>Weddings &amp; receptions</li>
+            <li>Engagement parties &amp; showers</li>
+            <li>Corporate dinners &amp; meetings</li>
+            <li>Milestone birthdays &amp; anniversaries</li>
+            <li>Holiday parties &amp; special gatherings</li>
+          </ul>
 
-  <!-- Footer -->
+          <h2>What’s Included</h2>
+          <p>
+            Each event package is tailored to your needs and may include:
+          </p>
+          <ul>
+            <li>Menu planning and tasting</li>
+            <li>Service staff and on-site chef</li>
+            <li>Tablescapes and décor recommendations</li>
+            <li>Coordination with your venue and vendors</li>
+          </ul>
 
-  <script src="js/script.js"></script>
+          <p>
+            We’ll walk through your timeline, guest count, and overall vision to
+            build an event that feels polished and personal.
+          </p>
+
+          <a href="contact.html" class="btn btn-primary">Start an Event Inquiry</a>
+        </div>
+
+        <div class="events-image">
+          <img src="images/event-banner.jpg" alt="Guests enjoying an elegant catered event">
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">728 Cuisine &amp; Events</p>
+        <p class="footer-text">Elegant Catering &amp; Events • Richmond, VA</p>
+        <p class="footer-text footer-copy">&copy; 2025 728 Cuisine &amp; Events. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('nav-open');
+        navToggle.classList.toggle('nav-open');
+      });
+    }
+  </script>
 </body>
 </html>
