@@ -1,65 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>728 Cuisine & Events | Home</title>
-  <link rel="stylesheet" href="css/style.css">   <!-- global -->
-  <link rel="stylesheet" href="css/home.css">    <!-- page-specific -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | 728 Cuisine &amp; Events</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="about.css">
 </head>
-
-<!-- Shared Footer -->
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>728 Cuisine & Events</h4>
-      <p>Elegance in Every Bite</p>
-    </div>
-    <div>
-      <h5>Contact</h5>
-      <p>Email: info@728cuisine.com</p>
-      <p>Phone: (555) 728-2728</p>
-    </div>
-    <div>
-      <h5>Follow</h5>
-      <p>
-        <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">Pinterest</a>
-      </p>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p>© 2025 728 Cuisine & Events. All rights reserved.</p>
-  </div>
-</footer>
-
-  <main class="page-content">
-    <section>
-      <h1>About 728 Cuisine &amp; Events</h1>
-      <p>728 Cuisine &amp; Events is a Richmond-area catering and event company that focuses on great food, smooth planning, and a luxury feel. Our black-and-gold brand reflects the quality, care, and celebration we bring to each event.</p>
-    </section>
-
-    <section class="about-layout">
-      <div>
-        <h2>Our Story</h2>
-        <p>728 started from a love of cooking for family and friends. Over time, that passion grew into a business that serves weddings, birthdays, graduations, corporate events, and more.</p>
-        <p>We believe in treating every event like it matters—because it does. We listen to your ideas, ask questions, and build a menu that fits your taste and budget.</p>
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+      <div class="logo-area">
+        <img src="images/728logo.jpeg" alt="728 Cuisine &amp; Events logo" class="logo-img">
+        <div class="logo-text">
+          <span class="brand-name">728 Cuisine &amp; Events</span>
+          <span class="brand-tagline">Elegant Catering &amp; Event Experiences</span>
+        </div>
       </div>
-      <div class="about-image">
-        <img src="images/chef.jpg" alt="Chef in black coat preparing food in a kitchen">
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about-hero">
+        <div class="about-hero-inner">
+          <p class="about-eyebrow">Meet the Chef &amp; Vision</p>
+          <h1>About 728 Cuisine &amp; Events</h1>
+          <p class="about-intro">
+            728 Cuisine &amp; Events brings together elevated flavors, polished service,
+            and a love for celebrating life’s most important moments.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-layout">
+        <div class="about-photo">
+          <img src="images/natasha-chef.jpg" alt="Chef and Owner Natasha Goldsmith">
+        </div>
+
+        <div class="about-content">
+          <h2>Chef &amp; Owner, Natasha Goldsmith</h2>
+          <p>
+            Natasha Goldsmith is the CEO and Owner of 728 Cuisine &amp; Events. Since 2013,
+            she has been curating private dinners, celebrations, and catered events that blend
+            soulful flavor with fine-dining presentation.
+          </p>
+          <p>
+            With a background in business management and a passion for hospitality, Natasha
+            understands that every event is personal. From the first inquiry to the last plated
+            course, her focus is on creating an experience that feels seamless, thoughtful,
+            and memorable for every guest.
+          </p>
+
+          <h3>Our Philosophy</h3>
+          <p>728 Cuisine &amp; Events is built on three pillars:</p>
+          <ul class="about-list">
+            <li><strong>Elevated Flavor</strong> – Menus crafted with quality ingredients and bold, balanced taste.</li>
+            <li><strong>Intentional Design</strong> – Tablescapes, plating, and ambiance that match your vision.</li>
+            <li><strong>Effortless Experience</strong> – Professional planning and service so you can enjoy your event.</li>
+          </ul>
+
+          <h3>Serving Richmond &amp; Beyond</h3>
+          <p>
+            Based in the Richmond, Virginia area, 728 Cuisine &amp; Events supports weddings,
+            corporate events, milestone birthdays, showers, intimate dinners, and more across
+            Central Virginia and surrounding regions.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">728 Cuisine &amp; Events</p>
+        <p class="footer-text">Elegant Catering &amp; Events • Richmond, VA</p>
+        <p class="footer-text footer-copy">&copy; 2025 728 Cuisine &amp; Events. All rights reserved.</p>
       </div>
-    </section>
+    </footer>
+  </div>
 
-    <section>
-      <h2>Our Values</h2>
-      <ul class="simple-list">
-        <li>Respecting each client’s vision and culture</li>
-        <li>Providing clear, honest communication</li>
-        <li>Delivering consistent quality every time</li>
-        <li>Keeping events organized, on time, and stress-free</li>
-      </ul>
-    </section>
-  </main>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
-  <footer>
-    <p>&copy; 2025 728 Cuisine &amp; Events. All rights reserved.</p>
-  </footer>
-
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('nav-open');
+        navToggle.classList.toggle('nav-open');
+      });
+    }
+  </script>
 </body>
 </html>
